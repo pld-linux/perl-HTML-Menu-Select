@@ -9,7 +9,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	HTML
 %define	pnam	Menu-Select
-Summary:	HTML::Menu::Select - Create HTML for select menus to simplify your templates.
+Summary:	HTML::Menu::Select - Create HTML for select menus to simplify your templates
 Name:		perl-HTML-Menu-Select
 Version:	1.01
 Release:	1
@@ -22,9 +22,9 @@ URL:		http://search.cpan.org/dist/HTML-Menu-Select/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
+#BuildRequires:	perl(Apache::Util)
 BuildRequires:	perl(CGI::Simple)
 BuildRequires:	perl(Test::Pod::Coverage)
-#BuildRequires:	perl(Apache::Util)
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,8 +32,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This modules creates HTML for form select items.
 
-This module allows you to quickly prototype a page, allowing the CGI 
-to completely generate the HTML, while allowing you at a later stage 
+This module allows you to quickly prototype a page, allowing the CGI
+to completely generate the HTML, while allowing you at a later stage
 to easily change how much HTML it generates.
 
 %prep
@@ -61,4 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%dir %{perl_vendorlib}/HTML/Menu
+%{perl_vendorlib}/HTML/Menu/Select.pm
 %{_mandir}/man3/*
