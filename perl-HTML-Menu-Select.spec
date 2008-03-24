@@ -10,6 +10,7 @@
 %define	pdir	HTML
 %define	pnam	Menu-Select
 Summary:	HTML::Menu::Select - Create HTML for select menus to simplify your templates
+Summary(pl.UTF-8):	HTML::Menu::Select - tworzenie HTML-a dla list wyboru w celu uproszczenia szablonów
 Name:		perl-HTML-Menu-Select
 Version:	1.01
 Release:	1
@@ -23,8 +24,8 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
 #BuildRequires:	perl(Apache::Util)
-BuildRequires:	perl(CGI::Simple)
-BuildRequires:	perl(Test::Pod::Coverage)
+BuildRequires:	perl-CGI-Simple
+BuildRequires:	perl-Test-Pod-Coverage
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,6 +36,13 @@ This modules creates HTML for form select items.
 This module allows you to quickly prototype a page, allowing the CGI
 to completely generate the HTML, while allowing you at a later stage
 to easily change how much HTML it generates.
+
+%description -l pl.UTF-8
+Ten moduł tworzy HTML dla elementów listy wyboru w formularzu.
+
+Pozwala szybko stworzyć prototyp strony, generowanej w całości przez
+CGI, a jednocześnie pozwala na późniejszym etapie zadecydować, jak
+dużo HTML-a będzie generowane.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
