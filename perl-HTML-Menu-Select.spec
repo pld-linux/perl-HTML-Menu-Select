@@ -6,7 +6,6 @@
 %bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	HTML
 %define	pnam	Menu-Select
 Summary:	HTML::Menu::Select - Create HTML for select menus to simplify your templates
