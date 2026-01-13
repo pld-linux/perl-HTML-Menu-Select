@@ -12,7 +12,7 @@ Summary:	HTML::Menu::Select - Create HTML for select menus to simplify your temp
 Summary(pl.UTF-8):	HTML::Menu::Select - tworzenie HTML-a dla list wyboru w celu uproszczenia szablonów
 Name:		perl-HTML-Menu-Select
 Version:	1.01
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
